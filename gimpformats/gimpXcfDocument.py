@@ -336,7 +336,8 @@ class GimpDocument(GimpIOBase):
 		"""Return a given layer."""
 
 		root_group = self.walkTree()
-		if 0 < index < len(root_group.children):
+		
+		if -len(root_group.children) < index < len(root_group.children):
 			return root_group.children[index]
 
 		msg = f"{index} is out of bounds for GimpDocument [{len(root_group.children)}]"
