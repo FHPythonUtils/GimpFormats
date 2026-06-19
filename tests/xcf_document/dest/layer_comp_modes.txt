@@ -1,6 +1,6 @@
-Version: 11
-Width: 256
-Height: 192
+Version: 23
+Width: 10
+Height: 10
 Base Color Mode: 0
 Precision: <GimpPrecision bits=16-bit, gamma=gamma, format=integer>
 Selected: False
@@ -18,7 +18,7 @@ Y Offset: 0
 Compression: CompressionMode.RLE
 Horizontal Resolution: 300.0
 Vertical Resolution: 300.0
-Unique Id: 00000003
+Unique Id: 00000006
 Units: Units.Millimetres
 Group Item Flags: 0
 Position Locked: False
@@ -33,14 +33,73 @@ Offset: 0 x 0
 Resolution: 300.0ppi x 300.0ppi
 Parasites:
 <GimpParasite name='gimp-comment', flags=1, data_len=18>
-<GimpParasite name='gimp-image-grid', flags=1, data_len=172>
-Guidelines:
-(False, 128)
+<GimpParasite name='gimp-image-grid', flags=1, data_len=281>
+<GimpParasite name='gimp-image-metadata', flags=1, data_len=1379>
 Layers:
-	Name: Capa
-	Size: 256 x 192
+	Name: RGB Color Profile - Intersection
+	Size: 10 x 10
 	colorMode: RGB color with alpha
 		Selected: True
+	Is Selection: False
+	Blend Mode: GimpBlendMode.NORMAL
+	Visible: True
+	Is Linked: False
+	Lock Alpha: False
+	Apply Mask: False
+	Editing Mask: False
+	Show Mask: False
+	Show Masked: False
+	X Offset: 0
+	Y Offset: 0
+	Compression: CompressionMode.None_Compression
+	Unique Id: 00000006
+	Units: Units.Inches
+	Locked: False
+	Group Item Flags: 0
+	Position Locked: False
+	Opacity: 1.0
+	Color Tag: TagColor.None_Color
+	Composite Mode: CompositeMode.Intersection
+	Composite Space: CompositeSpace.RGB_profile
+	Blend Space: 0
+	Vectors Version: 0
+	Active Vector Index: 0
+	Paths: []
+	Offset: 0 x 0
+	Name: RGB Linear - Clip To Backdrop
+	Size: 10 x 10
+	colorMode: RGB color with alpha
+		Selected: False
+	Is Selection: False
+	Blend Mode: GimpBlendMode.NORMAL
+	Visible: True
+	Is Linked: False
+	Lock Alpha: False
+	Apply Mask: False
+	Editing Mask: False
+	Show Mask: False
+	Show Masked: False
+	X Offset: 0
+	Y Offset: 0
+	Compression: CompressionMode.None_Compression
+	Unique Id: 00000004
+	Units: Units.Inches
+	Locked: False
+	Group Item Flags: 0
+	Position Locked: False
+	Opacity: 1.0
+	Color Tag: TagColor.None_Color
+	Composite Mode: CompositeMode.Clip_to_backdrop
+	Composite Space: CompositeSpace.RGB_linear
+	Blend Space: 0
+	Vectors Version: 0
+	Active Vector Index: 0
+	Paths: []
+	Offset: 0 x 0
+	Name: RGB Perceptual - Union
+	Size: 10 x 10
+	colorMode: RGB color with alpha
+		Selected: False
 	Is Selection: False
 	Blend Mode: GimpBlendMode.NORMAL
 	Visible: True
@@ -61,15 +120,15 @@ Layers:
 	Opacity: 1.0
 	Color Tag: TagColor.None_Color
 	Composite Mode: CompositeMode.Union
-	Composite Space: CompositeSpace.RGB_linear
+	Composite Space: CompositeSpace.RGB_perceptual
 	Blend Space: 0
 	Vectors Version: 0
 	Active Vector Index: 0
 	Paths: []
 	Offset: 0 x 0
-	Name: Fondo
-	Size: 256 x 192
-	colorMode: RGB color without alpha
+	Name: Auto
+	Size: 10 x 10
+	colorMode: RGB color with alpha
 		Selected: False
 	Is Selection: False
 	Blend Mode: GimpBlendMode.NORMAL
@@ -83,7 +142,7 @@ Layers:
 	X Offset: 0
 	Y Offset: 0
 	Compression: CompressionMode.None_Compression
-	Unique Id: 00000002
+	Unique Id: 00000005
 	Units: Units.Inches
 	Locked: False
 	Group Item Flags: 0
@@ -97,34 +156,3 @@ Layers:
 	Active Vector Index: 0
 	Paths: []
 	Offset: 0 x 0
-Channels:
-	Name: Máscara de selección
-	Size: 256 x 192
-		Selected: False
-	Is Selection: True
-	Blend Mode: GimpBlendMode.ADDITION
-	Visible: True
-	Is Linked: False
-	Lock Alpha: False
-	Apply Mask: False
-	Editing Mask: False
-	Show Mask: False
-	Show Masked: True
-	X Offset: 0
-	Y Offset: 0
-	Compression: CompressionMode.None_Compression
-	Unique Id: 00000001
-	Units: Units.Inches
-	Locked: False
-	Group Item Flags: 0
-	Position Locked: False
-	Opacity: 0.5
-	Color Tag: TagColor.None_Color
-	Composite Mode: CompositeMode.Union
-	Composite Space: CompositeSpace.RGB_linear
-	Color: [0.0, 0.0, 0.0]
-	Vectors Version: 0
-	Active Vector Index: 0
-	Paths: []
-	Offset: 0 x 0
-	Color: (0.0, 0.0, 0.0)

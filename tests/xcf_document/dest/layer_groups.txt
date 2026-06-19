@@ -59,8 +59,8 @@ Layers:
 	Position Locked: False
 	Opacity: 1.0
 	Color Tag: TagColor.None_Color
-	Composite Mode: CompositeMode.Intersection
-	Composite Space: CompositeSpace.LAB
+	Composite Mode: CompositeMode.Union
+	Composite Space: CompositeSpace.RGB_linear
 	Blend Space: 0
 	Vectors Version: 0
 	Active Vector Index: 0
@@ -89,8 +89,8 @@ Layers:
 	Position Locked: False
 	Opacity: 1.0
 	Color Tag: TagColor.None_Color
-	Composite Mode: CompositeMode.Intersection
-	Composite Space: CompositeSpace.LAB
+	Composite Mode: CompositeMode.Union
+	Composite Space: CompositeSpace.RGB_linear
 	Blend Space: 0
 	Vectors Version: 0
 	Active Vector Index: 0
@@ -119,8 +119,8 @@ Layers:
 	Position Locked: False
 	Opacity: 1.0
 	Color Tag: TagColor.None_Color
-	Composite Mode: CompositeMode.Intersection
-	Composite Space: CompositeSpace.LAB
+	Composite Mode: CompositeMode.Union
+	Composite Space: CompositeSpace.RGB_linear
 	Blend Space: 0
 	Vectors Version: 0
 	Active Vector Index: 0

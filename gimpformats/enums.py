@@ -26,8 +26,9 @@ class CompositeMode(Enum):
 
 class CompositeSpace(Enum):
 	RGB_linear = "RGB (linear)"
-	RGB_perceptual = "RGB (perceptual)"
+	RGB_profile = "RGB (from color profile)"
 	LAB = "LAB"
+	RGB_perceptual = "RGB (perceptual)"
 
 
 class TagColor(Enum):
@@ -150,7 +151,7 @@ class GeneralProperties(Enum):
 	PROP_VISIBLE = 8
 	PROP_TATTOO = 20
 	# PROP_ITEM_SET_ITEM = 41
-	# PROP_LOCK_VISIBILITY = 42
+	PROP_LOCK_VISIBILITY = 42
 
 
 class ImageProperties(Enum):

@@ -15,7 +15,7 @@ def gimp_doc() -> GimpDocument:
 
 
 @pytest.mark.parametrize(
-	("image_name"), ["testOneLayerWithTransparency", "testComplexImage", "issue_14", "layer_groups"]
+	("image_name"), ["testOneLayerWithTransparency", "testComplexImage", "issue_14", "layer_groups", "layer_comp_modes"]
 )
 def test_image_repr(gimp_doc: GimpDocument, image_name: str) -> None:
 	"""Test the text representation of an image."""

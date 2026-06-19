@@ -67,6 +67,7 @@ class GimpIOBase:
 		self.isGroup = None
 		self.groupItemFlags: int = 0
 		self.positionLocked: bool = False
+		self.visibilityLocked: bool = False
 		self.opacity: float = 1.0
 		self.colorTag: TagColor = TagColor.Blue
 		self.compositeMode: CompositeMode = CompositeMode.Union
@@ -320,14 +321,16 @@ class GimpIOBase:
 			self.groupItemFlags = ioBuf.u32
 		elif _prop_cmp(prop, AllProps.PROP_LOCK_POSITION):
 			self.positionLocked = ioBuf.boolean
+		elif _prop_cmp(prop, AllProps.PROP_LOCK_VISIBILITY):
+			self.visibilityLocked = ioBuf.boolean
 		elif _prop_cmp(prop, AllProps.PROP_FLOAT_OPACITY):
 			self.opacity = ioBuf.float32
 		elif _prop_cmp(prop, AllProps.PROP_COLOR_TAG):
 			self.colorTag = list(TagColor)[ioBuf.u32]
 		elif _prop_cmp(prop, AllProps.PROP_COMPOSITE_MODE):
-			self.compositeMode = list(CompositeMode)[ioBuf.i32]
+			self.compositeMode = list(CompositeMode)[abs(ioBuf.i32) - 1]
 		elif _prop_cmp(prop, AllProps.PROP_COMPOSITE_SPACE):
-			self.compositeSpace = list(CompositeSpace)[ioBuf.i32]
+			self.compositeSpace = list(CompositeSpace)[abs(ioBuf.i32) - 1]
 		elif _prop_cmp(prop, AllProps.PROP_BLEND_SPACE):
 			self.blendSpace = ioBuf.u32
 		elif _prop_cmp(prop, AllProps.PROP_FLOAT_COLOR):
@@ -479,6 +482,9 @@ class GimpIOBase:
 		elif _prop_cmp(prop, AllProps.PROP_LOCK_POSITION):
 			if self.positionLocked is not None and self.positionLocked:
 				ioBuf.boolean = self.positionLocked
+		elif _prop_cmp(prop, AllProps.PROP_LOCK_VISIBILITY):
+			if self.visibilityLocked is not None and self.visibilityLocked:
+				ioBuf.boolean = self.visibilityLocked
 		elif _prop_cmp(prop, AllProps.PROP_FLOAT_OPACITY):
 			if self.opacity is not None and isinstance(self.opacity, float):
 				ioBuf.float32 = self.opacity
@@ -487,10 +493,10 @@ class GimpIOBase:
 				ioBuf.u32 = list(TagColor).index(self.colorTag)
 		elif _prop_cmp(prop, AllProps.PROP_COMPOSITE_MODE):
 			if self.compositeMode is not None:
-				ioBuf.i32 = list(CompositeMode).index(self.compositeMode)
+				ioBuf.i32 = list(CompositeMode).index(self.compositeMode) + 1
 		elif _prop_cmp(prop, AllProps.PROP_COMPOSITE_SPACE):
 			if self.compositeSpace is not None:
-				ioBuf.i32 = list(CompositeSpace).index(self.compositeSpace)
+				ioBuf.i32 = list(CompositeSpace).index(self.compositeSpace) + 1
 		elif _prop_cmp(prop, AllProps.PROP_BLEND_SPACE):
 			if self.blendSpace is not None:
 				ioBuf.u32 = self.blendSpace

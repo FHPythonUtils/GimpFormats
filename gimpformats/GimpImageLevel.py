@@ -127,9 +127,9 @@ class GimpImageLevel(GimpIOBase):
 				index += 1
 
 				if 0 <= opcode <= 126:  # Short run of identical bytes
-					val = data[index]
+					val = data[index:index+1]  # use 1-len bytearray to avoid slow list
 					index += 1
-					ret[chan].extend([val] * (opcode + 1))  # Extend is faster than append in a loop
+					ret[chan].extend(val * (opcode + 1))  # Extend is faster than append in a loop
 					n += opcode + 1
 
 				elif opcode == 127:  # Long run of identical bytes
@@ -137,10 +137,10 @@ class GimpImageLevel(GimpIOBase):
 					index += 1
 					b = data[index]
 					index += 1
-					val = data[index]
+					val = data[index:index+1]  # use 1-len bytearray to avoid slow list
 					index += 1
 					amt = (m << 8) + b
-					ret[chan].extend([val] * amt)
+					ret[chan].extend(val * amt)
 					n += amt
 
 				elif opcode == 128:  # Long run of different bytes
