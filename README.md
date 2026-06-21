@@ -4,7 +4,7 @@
 [![Commit activity](https://img.shields.io/github/commit-activity/m/FHPythonUtils/GimpFormats.svg?style=for-the-badge&cacheSeconds=28800)](../../commits/master)
 [![Last commit](https://img.shields.io/github/last-commit/FHPythonUtils/GimpFormats.svg?style=for-the-badge&cacheSeconds=28800)](../../commits/master)
 [![PyPI Downloads](https://img.shields.io/pypi/dm/gimpformats.svg?style=for-the-badge&cacheSeconds=28800)](https://pypistats.org/packages/gimpformats)
-[![PyPI Total Downloads](https://img.shields.io/pepy/dt/gimpformats?style=for-the-badge&label=Total%20Downloads&cacheSeconds=28800)](https://pepy.tech/project/attestationcheck)
+[![PyPI Total Downloads](https://img.shields.io/pepy/dt/gimpformats?style=for-the-badge&label=Total%20Downloads&cacheSeconds=28800)](https://pepy.tech/project/gimpformats)
 [![PyPI Version](https://img.shields.io/pypi/v/gimpformats.svg?style=for-the-badge&cacheSeconds=28800)](https://pypi.org/project/gimpformats)
 
 <!-- omit in toc -->
